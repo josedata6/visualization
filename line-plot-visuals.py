@@ -41,7 +41,8 @@ sns.catplot(data=df, x='gender', kind='count', hue='gender',
               palette={'female':'#ffb5a7', 'male':'#168aad'})
 plt.show()
 
-sns.dogplot()
+## showing the dog image of dog plot :)
+##sns.dogplot()
 
 sns.catplot(data=df, x='gender', y='math_score', hue='lunch', kind='bar',
             palette={'standard':'#6f1d1b', 'free/reduced':'#bb9457'})
