@@ -32,3 +32,17 @@ df.head()
 len(df)
 
 df['gender'].value_counts()
+
+sns.countplot(data=df, x='gender', hue='gender',
+              palette={'female':'#ffb5a7', 'male':'#168aad'})
+plt.show()
+
+sns.catplot(data=df, x='gender', kind='count', hue='gender',
+              palette={'female':'#ffb5a7', 'male':'#168aad'})
+plt.show()
+
+sns.dogplot()
+
+sns.catplot(data=df, x='gender', y='math_score', hue='lunch', kind='bar',
+            palette={'standard':'#6f1d1b', 'free/reduced':'#bb9457'})
+plt.show()
