@@ -46,3 +46,18 @@ sns.dogplot()
 sns.catplot(data=df, x='gender', y='math_score', hue='lunch', kind='bar',
             palette={'standard':'#6f1d1b', 'free/reduced':'#bb9457'})
 plt.show()
+
+sns.catplot(data=df, x='gender', y='math_score', kind='swarm')
+plt.show()
+
+# sample data
+sample_df = df.iloc[0:200, :]
+sample_df.shape
+
+sns.catplot(data=sample_df, y='gender', x='math_score', kind='swarm',
+            hue='lunch', palette={'standard':'#ee9b00', 'free/reduced':'#5a189a'})
+plt.show()
+
+sns.catplot(data=sample_df, y='gender', x='math_score', kind='violin',
+            hue='lunch', palette={'standard':'#ee9b00', 'free/reduced':'#5a189a'})
+plt.show()
