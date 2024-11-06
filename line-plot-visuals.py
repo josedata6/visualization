@@ -62,3 +62,25 @@ plt.show()
 sns.catplot(data=sample_df, y='gender', x='math_score', kind='violin',
             hue='lunch', palette={'standard':'#ee9b00', 'free/reduced':'#5a189a'})
 plt.show()
+
+sns.catplot(data=df, x='gender', y='math_score', kind='violin',
+            hue='gender', inner=None,
+            palette={'female':'#ffb5a7', 'male':'#168aad'})
+plt.show()
+
+# stacking technique, combining visulation
+sns.catplot(data=sample_df, x='gender', y='math_score', kind='violin',
+            inner=None, hue='gender',
+            palette={'female':'#ffcad4', 'male':'#468faf'})
+sns.swarmplot(data=sample_df, x='gender', y='math_score',
+              palette={'female':'#ad2831', 'male':'#d0f4de'},
+              marker='d', size=6)
+plt.show()
+
+# stacking technique, combining visulation
+sns.catplot(data=sample_df, x='gender', y='math_score', kind='violin',
+            inner=None, hue='gender',
+            palette={'female':'white', 'male':'white'})
+sns.swarmplot(data=sample_df, x='gender', y='math_score', color='white',
+              marker='p', size=6, hue='gender', palette={'female':'#ad2831', 'male':'#d0f4de'})
+plt.show()
